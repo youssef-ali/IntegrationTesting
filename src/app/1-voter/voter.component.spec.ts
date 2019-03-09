@@ -28,18 +28,18 @@ describe('VoterComponent', () => {
     expect(el.innerText ).toContain('21');
   });
 
-  // it('should highlight the upvote button if I had upvoted', () => {
-  //   component.myVote = 1;
-  //   fixture.detectChanges();
+  it('should highlight the upvote button if I had upvoted', () => {
+    component.myVote = 1;
+    fixture.detectChanges();
 
-  //   let de = fixture.debugElement.query(By.css('.glyphicon-menu-up'));
-  //   expect(de.classes['highlighted']).toBeTruthy();
-  // });
+    let de = fixture.debugElement.query(By.css('.glyphicon-menu-up'));
+    expect(de.classes['highlighted']).toBeTruthy();
+  });
 
-  // it('should increase total votes when I click upvote buttn', () => {
-  //   let button = fixture.debugElement.query(By.css('.glyphicon-menu-up'));
-  //   button.triggerEventHandler('click', null);
+  it('should increase total votes when I click upvote buttn', () => {
+    let button = fixture.debugElement.query(By.css('.glyphicon-menu-up'));
+    button.triggerEventHandler('click', null);
 
-  //   expect(component.totalVotes).toBe(1);
-  // });
+    expect(component.totalVotes).toBe(1);
+  });
 });
